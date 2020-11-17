@@ -26,7 +26,7 @@ public class Asteroid : MonoBehaviour ,IDamagable
 
         
 
-        InvokeRepeating("AddForceRepated",5,10);
+        InvokeRepeating("AddForceRepated",5,2);
       
     }
 
@@ -39,7 +39,7 @@ public class Asteroid : MonoBehaviour ,IDamagable
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("ship"))
+        if (other.gameObject.tag=="ship")
         {
             Destroy(other.gameObject);
         }

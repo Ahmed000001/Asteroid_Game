@@ -21,7 +21,7 @@ public class PlayerShipPossion : MonoBehaviour ,IDamagable
     void FixedUpdate()
     {
         float HorizontalAxis = Input.GetAxis("Horizontal");
-        print(HorizontalAxis);
+     
         float VerticalAxix = Input.GetAxis("Vertical");
         shipMovementComponent.Rotate(HorizontalAxis);
            shipMovementComponent.MoveForward(VerticalAxix);

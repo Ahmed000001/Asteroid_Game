@@ -86,9 +86,12 @@ public class AsteroidManger : MonoBehaviour
 
     public void CleanAsteroids()
     {
-        foreach (var asteroid in spwandAsteroids)
+        for (int i = 0; i < spwandAsteroids.Count; i++)
         {
-          Destroy(asteroid);  
+         
+            
+                DestroyImmediate(spwandAsteroids[i].gameObject);  
+            
         }
 
         spwandAsteroids.Clear();
