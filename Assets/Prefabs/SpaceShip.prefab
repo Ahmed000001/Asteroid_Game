@@ -199,10 +199,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1683544048175110043}
   - component: {fileID: 517393341}
-  - component: {fileID: 517393343}
   - component: {fileID: 517393342}
   - component: {fileID: 517393340}
   - component: {fileID: 2205900712757263895}
+  - component: {fileID: 4739571954298482216}
   m_Layer: 0
   m_Name: SpaceShip
   m_TagString: ship
@@ -242,19 +242,6 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 84
   m_CollisionDetection: 1
---- !u!65 &517393343
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1683544048175110044}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1.9874036}
-  m_Center: {x: 0, y: 0, z: 0.81394076}
 --- !u!114 &517393342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,6 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  angluarSpeed: 60
 --- !u!114 &517393340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -297,3 +285,16 @@ MonoBehaviour:
   bulletSpeed: 29.18
   muzzle: {fileID: 153582308}
   bulletsrate: 0.3
+--- !u!65 &4739571954298482216
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683544048175110044}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.26, y: 1.08, z: 2.11}
+  m_Center: {x: 0, y: 0, z: 0.84}

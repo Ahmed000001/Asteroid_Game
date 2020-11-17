@@ -37,22 +37,20 @@ public class Asteroid : MonoBehaviour ,IDamagable
         transform.position=new Vector3(transform.position.x,0,transform.position.z);
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("ship"))
+        {
+            Destroy(other.gameObject);
+        }
+    }
+
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("ship"))
-        {
-            Destroy(other.gameObject);
-        }
+        
     }
 
-    private void OnCollisionExit(Collision other)
-    {
-
-        if (other.gameObject.CompareTag("ship"))
-        {
-            Destroy(other.gameObject);
-        }
-    }
+  
 }
 
 public enum AsteroidType

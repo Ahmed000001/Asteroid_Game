@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 58571680031355868}
   - component: {fileID: 1980099974976069387}
   - component: {fileID: 6668001509080099258}
+  - component: {fileID: 3836603343726625925}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -48,7 +49,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 84
-  m_CollisionDetection: 2
+  m_CollisionDetection: 1
 --- !u!114 &6668001509080099258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,6 +64,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeTime: 2
   damageAmount: 1
+--- !u!136 &3836603343726625925
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400560507002070661}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.19
+  m_Height: 0.69
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2418137794156687762
 GameObject:
   m_ObjectHideFlags: 0
@@ -74,7 +89,6 @@ GameObject:
   - component: {fileID: 2418137794156687765}
   - component: {fileID: 2418137794156687766}
   - component: {fileID: 2418137794156687767}
-  - component: {fileID: 2418137794156687760}
   m_Layer: 0
   m_Name: Bulletmesh
   m_TagString: Untagged
@@ -143,17 +157,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &2418137794156687760
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2418137794156687762}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
