@@ -13,6 +13,7 @@ public class AsteroidManger : MonoBehaviour
     [SerializeField] private GameObject[] SpawnLoactions;
     private float minX, maxX, minZ, maxZ;
     private List<Asteroid> spwandAsteroids;
+   
     private void Awake()
     {
         if (Insatnce == null)
@@ -88,9 +89,12 @@ public class AsteroidManger : MonoBehaviour
     {
         for (int i = 0; i < spwandAsteroids.Count; i++)
         {
-         
-            
-                DestroyImmediate(spwandAsteroids[i].gameObject);  
+
+            if (spwandAsteroids[i]!=null)
+            {
+                Destroy(spwandAsteroids[i].gameObject);
+            }
+                 
             
         }
 

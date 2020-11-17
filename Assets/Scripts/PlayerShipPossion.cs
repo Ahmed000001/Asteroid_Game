@@ -20,18 +20,36 @@ public class PlayerShipPossion : MonoBehaviour ,IDamagable
 
     void FixedUpdate()
     {
+#if UNITY_EDITOR || UNITY_STANDALONE
         float HorizontalAxis = Input.GetAxis("Horizontal");
      
         float VerticalAxix = Input.GetAxis("Vertical");
         shipMovementComponent.Rotate(HorizontalAxis);
            shipMovementComponent.MoveForward(VerticalAxix);
 
-#if UNITY_EDITOR || UNITY_STANDALONE
+
         if (Input.GetKey(KeyCode.Space))
         {
 
             shipShootingComponent.ShootMainCannon();
         }
+ #elif UNITY_ANDROID || UNITY_IOS
+  
+        Vector2 axies = MobileController.Instance.GetjoyStickAxies();
+
+
+        shipMovementComponent.Rotate(axies.x);
+        shipMovementComponent.MoveForward(axies.y);
+
+
+        if (MobileController.Instance.GetFireButton())
+        {
+
+            shipShootingComponent.ShootMainCannon();
+        }
+
+
+
 #endif
 
 

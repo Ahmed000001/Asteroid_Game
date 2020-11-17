@@ -26,7 +26,7 @@ public class Asteroid : MonoBehaviour ,IDamagable
 
         
 
-        InvokeRepeating("AddForceRepated",5,2);
+        InvokeRepeating("AddForceRepated",5,1);
       
     }
 

@@ -14,7 +14,7 @@ public class GameUIController : MonoBehaviour
     [SerializeField] private Text scoreText;
     [SerializeField] private Text hiScoreText;
     [SerializeField] private Text livesText;
-
+    [SerializeField] private Canvas mobileControllerCanvas;
     private void Awake()
     {
         if (Instance == null)
@@ -31,6 +31,12 @@ public class GameUIController : MonoBehaviour
         UpdateHiScoreText(PlayerData.Instance.HighScore);
         PlayerData.Instance.CurrentLivesChanged += UpdateLivesText;
         UpdateLivesText(PlayerData.Instance.Lives);
+
+#if UNITY_STANDALONE
+        mobileControllerCanvas.gameObject.SetActive(false);
+#elif UNITY_ANDROID || UNITY_IOS
+mobileControllerCanvas.gameObject.SetActive(true);
+#endif
     }
 
     public void UpdateScoreText(int score)
