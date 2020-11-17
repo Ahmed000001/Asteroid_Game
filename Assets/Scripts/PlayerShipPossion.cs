@@ -20,7 +20,7 @@ public class PlayerShipPossion : MonoBehaviour ,IDamagable
 
     void FixedUpdate()
     {
-#if UNITY_EDITOR || UNITY_STANDALONE
+#if  UNITY_STANDALONE
         float HorizontalAxis = Input.GetAxis("Horizontal");
      
         float VerticalAxix = Input.GetAxis("Vertical");
@@ -33,7 +33,7 @@ public class PlayerShipPossion : MonoBehaviour ,IDamagable
 
             shipShootingComponent.ShootMainCannon();
         }
- #elif UNITY_ANDROID || UNITY_IOS
+ #elif UNITY_ANDROID || UNITY_IOS ||UNITY_EDITOR
   
         Vector2 axies = MobileController.Instance.GetjoyStickAxies();
 
